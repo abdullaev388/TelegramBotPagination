@@ -4,6 +4,7 @@ import logging
 from aiogram import Bot, Dispatcher, types
 
 from Tgbot import config
+from Tgbot.handlers import register_handlers
 
 logger = logging.getLogger(__name__)
 
@@ -17,6 +18,8 @@ async def main():
 
     bot = Bot(token=config.BOT_TOKEN, parse_mode=types.ParseMode.HTML)
     dp = Dispatcher(bot)
+
+    register_handlers(dp)
 
     try:
         await dp.start_polling()
