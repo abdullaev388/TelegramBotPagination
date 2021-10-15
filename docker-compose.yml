@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  bot:
+    container_name: bot
+    build: .
+    command: python main.py
+    restart: always
