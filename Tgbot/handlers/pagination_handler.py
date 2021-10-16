@@ -36,6 +36,11 @@ async def pagination2(call: CallbackQuery, callback_data: dict):
             return
 
 
+async def current_index_handler(call: CallbackQuery):
+    await call.answer(':)')
+
+
 def register_pagination_handler(dp: Dispatcher):
     dp.register_callback_query_handler(pagination, pagination_callback.filter())
     dp.register_callback_query_handler(pagination2, pagination_2_callback.filter())
+    dp.register_callback_query_handler(current_index_handler, text='current')
