@@ -5,7 +5,7 @@ load_dotenv()
 
 BOT_TOKEN = getenv('BOT_TOKEN')
 PHOTOS = [
-    f'photos/photo_{num}.jpg' for num in range(1, 6)
+    f'photos/photo_{num}.jpg' for num in range(1, 8)
 ]
 min_index = 0
 max_index = len(PHOTOS) - 1
